@@ -1,0 +1,17 @@
+# LaTeX build output
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*_preview*.png
+
+# Your filled-in copies stay out of the shared repo
+resume_*.tex
+resume_*.pdf
+inventory.md
+WORK_LOG.md
+!templates/inventory.md
+!templates/WORK_LOG.md

@@ -1,0 +1,121 @@
+%-------------------------
+% One-page tech resume
+% Layout adapted from Jake Gutierrez's "Jake's Resume" (MIT License),
+% github.com/jakegut/resume. Follows RULES.md in this repo.
+% Replace every placeholder. Numbers bold, tool names plain.
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{empty}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Make the PDF machine readable for ATS parsers
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING (one line)----------
+\begin{center}
+  \textbf{\Huge \scshape Your Name} \\ \vspace{4pt}
+  \small +1 (555) 555-5555 $|$ \href{mailto:you@example.com}{you@example.com} $|$
+  \href{https://example.com}{example.com} $|$
+  \href{https://github.com/you}{github.com/you} $|$
+  \href{https://linkedin.com/in/you}{linkedin.com/in/you}
+\end{center}
+
+%----------EDUCATION (first)----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University Name}{Anticipated Graduation: May 2028}
+    {Bachelor of Science -- Computer Science}{}
+  \resumeItemListStart
+    \resumeItem{\textbf{Relevant Coursework:} Data Structures, Algorithms, Operating Systems, Databases}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------EXPERIENCE (Company | stack on line one)----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {\href{https://example.com}{Company Name} $|$ \textnormal{\small Python, FastAPI, PostgreSQL}}{Jun 2026 -- Present}
+    {Software Engineer Intern}{}
+  \resumeItemListStart
+    \resumeItem{Built a dispatch tool that sends every order to \textbf{one driver}, cutting daily planning from \textbf{2 hours to 10 minutes}.}
+    \resumeItem{Automated invoice generation on Stripe, cutting month-end billing from \textbf{3 days to 4 hours}.}
+    \resumeItem{Replaced a shared spreadsheet with an online booking page for \textbf{40 tutors}, blocking double-booked slots.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {\href{https://example.com}{Second Company} $|$ \textnormal{\small TypeScript, React, Node.js}}{Jan 2026 -- Apr 2026}
+    {Software Developer Intern}{}
+  \resumeItemListStart
+    \resumeItem{Launched a real-time study-group chat on WebSockets, used weekly by \textbf{250+ students} across \textbf{4 courses}.}
+    \resumeItem{Cut page load time from \textbf{3.1s to 0.8s} by caching course data and lazy-loading images.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------PROJECTS (claim placements)----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {\href{https://github.com/you/project}{Project Name (1st Place)} $|$ \textnormal{\small Python, PyTorch}}{}
+    {Hackathon Name 2026, Track Name; team of 4}{}
+  \resumeItemListStart
+    \resumeItem{Built a spam classifier reaching \textbf{92\% accuracy} on a held-out test split.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------SKILLS (only what you can defend)----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: Python, TypeScript, Java, SQL} \\
+    \textbf{Frameworks}{: React, Next.js, FastAPI, Node.js} \\
+    \textbf{Data \& Systems}{: PostgreSQL, Redis, Docker, Linux} \\
+    \textbf{Tools}{: Git, GitHub Actions, Vercel, pytest}
+  }}
+\end{itemize}
+
+\end{document}
